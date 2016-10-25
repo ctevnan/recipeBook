@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'recipes.component.html'
 })
 export class RecipesComponent implements OnInit {
+  selectedRecipe: Recipe;
   
   constructor() {}
 
