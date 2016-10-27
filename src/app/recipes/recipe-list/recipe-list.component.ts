@@ -8,7 +8,10 @@ import { Recipe } from '../recipe';
   templateUrl: 'recipe-list.component.html'
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Schnitzel', 'Very tasty', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Wiener-Schnitzel02.jpg/220px-Wiener-Schnitzel02.jpg', []),
+    new Recipe('Summer Salad', 'Okay', 'http://img1.cookinglight.timeinc.net/sites/default/files/image/Oxmoor/oh3959p80-cobb-salad-green-goddess-dressing-m.jpg', [])
+  ];
 
   @Output() recipeSelected = new EventEmitter<Recipe>();
 

@@ -13,6 +13,7 @@ import { RecipeListComponent } from './recipes/recipe-list';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
+import { Ingredient } from "../shared";
 
 @NgModule({
   declarations: [
