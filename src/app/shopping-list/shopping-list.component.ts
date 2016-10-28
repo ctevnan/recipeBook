@@ -15,5 +15,6 @@ export class ShoppingListComponent implements OnInit {
   constructor(private sls: ShoppingListService) {}
 
   ngOnInit() {
+    this.items = this.sls.getItems();
   }
 }
