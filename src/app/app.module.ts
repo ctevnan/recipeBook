@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Directive, HostBinding, HostListener } from '@angular/core';
 import { EventEmitter, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -16,7 +17,6 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { DropdownDirective } from './dropdown.directive';
-import { RecipeItemComponent } from './recipe-item.component';
 import { RecipeService } from "./recipes";
 
 @NgModule({
@@ -29,8 +29,7 @@ import { RecipeService } from "./recipes";
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingListAddComponent,
-    DropdownDirective,
-    RecipeItemComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
