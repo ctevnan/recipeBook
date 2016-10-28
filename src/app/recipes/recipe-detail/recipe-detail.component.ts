@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Recipe } from '../recipe';
+import { ShoppingListService } from "../../shopping-list";
 
 @Component({
   moduleId: 'module.id',
@@ -16,6 +17,6 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onAddToShoppingList(){
-
+    this.sls.addItems(this.selectedRecipe.ingredients);
   }
 }
