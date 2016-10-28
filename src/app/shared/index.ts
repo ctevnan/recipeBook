@@ -1,1 +1,1 @@
-export { Ingredient } from '../shared';
+export * from './ingredient';
