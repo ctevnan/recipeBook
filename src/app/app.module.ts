@@ -7,7 +7,7 @@ import { Input } from '@angular/core';
 import { Directive, HostBinding, HostListener } from '@angular/core';
 import { EventEmitter, Output } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { routing } from "./app/routing";
+import { Routes, RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -20,6 +20,7 @@ import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.comp
 import { DropdownDirective } from './dropdown.directive';
 import { RecipeService } from "./recipes";
 import { ShoppingListService } from './shopping-list';
+import { routing } from "./app.routing";
 
 @NgModule({
   declarations: [
