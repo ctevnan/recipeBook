@@ -7,6 +7,7 @@ import { Input } from '@angular/core';
 import { Directive, HostBinding, HostListener } from '@angular/core';
 import { EventEmitter, Output } from '@angular/core';
 import { Injectable } from '@angular/core';
+import { routing } from "./app/routing";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -35,7 +36,8 @@ import { ShoppingListService } from './shopping-list';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
