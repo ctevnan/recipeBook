@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Recipe } from '../recipe';
 import { ShoppingListService } from "../../shopping-list";
@@ -9,7 +9,7 @@ import { ShoppingListService } from "../../shopping-list";
   templateUrl: 'recipe-detail.component.html',
 })
 export class RecipeDetailComponent implements OnInit {
-  @Input() selectedRecipe: Recipe;
+  selectedRecipe: Recipe;
   
   constructor(private sls: ShoppingListService) {}
 
