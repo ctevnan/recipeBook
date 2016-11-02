@@ -33,4 +33,8 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   onAddToShoppingList(){
     this.sls.addItems(this.selectedRecipe.ingredients);
   }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
