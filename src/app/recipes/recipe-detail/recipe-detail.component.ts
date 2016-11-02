@@ -4,6 +4,7 @@ import { Subscription } from "rxjs/Rx";
 
 import { Recipe } from '../recipe';
 import { ShoppingListService } from "../../shopping-list";
+import { RecipeService } from "../recipe.service";
 
 @Component({
   moduleId: 'module.id',
@@ -15,12 +16,16 @@ export class RecipeDetailComponent implements OnInit {
   private recipeIndex: number;
   selectedRecipe: Recipe;
   
-  constructor(private sls: ShoppingListService, private route: ActivatedRoute) {}
+  constructor(private sls: ShoppingListService,
+              private route: ActivatedRoute,
+              private recipesService: RecipeService) {
+  }
 
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.recipeIndex = params['id'];
+        this.selectedRecipe = this.recipesService.getRecipe(this.recipeIndex);
       }
     );
   }
