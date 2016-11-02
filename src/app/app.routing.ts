@@ -2,7 +2,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { RecipesComponent } from "./recipes/recipes.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
-import { RECIPE_ROUTES } from "./recipes/recipe.routes";
+import { RECIPE_ROUTES } from "./recipes/recipes.routes";
 
 const APP_ROUTES: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
